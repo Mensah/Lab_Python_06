@@ -52,7 +52,8 @@ class Team:
         self.players.append(player)
 
     def __str__(self):
-        description ='The ' + self.name + ' team currently managed by  ' + self.manager_name + ', are at the top of their group table with ' + self.points + 'points in the ' + self.league + ' Cup'
+        description = 'This is ' + self.players       
+#        description ='The ' + self.name + ' team currently managed by  ' + self.manager_name + ', are at the top of their group table with ' + self.points + 'points in the ' + self.league + ' Cup'
         return description
         
         
@@ -61,8 +62,59 @@ Spain = Team('Espanyol', 'Euro2012','Nii Guardiola','6')
 torres = Player('Fernando', 'Torres', Spain)
 ronaldo = Player('Ronaldo', 'Cristiano', Portugal)
 Spain.add_player(torres)
+Portugal.add_player(ronaldo)
 
-print Spain.players
+
+import datetime
+class Match:
+    def __init__(self, home_team, away_team, date):
+        self.home_team = home_team
+        self.away_team = away_team
+        self.date = date
+        self.home_scores = {}
+        self.away_scores = {}
+
+    def home_score(self):
+        t_home_score = []
+        for i in self.home_scores:
+            if len(self.home_scores) > 0:
+                r = self.home_score[i]
+                t_home_score.append(r)
+
+            else:
+                r = self.home_score[i]
+                r = 0
+                t_home_score.append(r)
+                
+        return sum(t_home_score)
+        
+
+    def away_score(self):
+        t_away_score = []
+        for i in self.away_score:
+            if len(self.away_scores) > 0:
+                r = self.away_score[i]
+                t_away_score.append(r)
+
+            else:
+                r = self.away_score[i]
+                r = 0
+                t_away_score.append(r)
+                
+        return sum(t_away_score)
+
+    def winner(self):
+        h = len(self.home_scores)
+        a = len(self.away_scores)
+        if a<h:
+
+        elif a>h:
+
+        else:
+            
+        
+
+    def
 
 
 
