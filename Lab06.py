@@ -104,17 +104,36 @@ class Match:
         return sum(t_away_score)
 
     def winner(self):
-        h = len(self.home_scores)
-        a = len(self.away_scores)
+        h = sum(self.home_scores.values())
+        a = sum(self.away_scores.values())
         if a<h:
-
+            return self.home_team
         elif a>h:
-
+            return self.away_team
         else:
-            
-        
+            return 'Draw'
 
-    def
+    def add_score(self,player,score):
+        self.player = player
+        self.score = score
+        score = 1
+        if player.team == self.home_team: 
+            self.home_scores[player] = [score]
+        elif player.team == self.away_team:
+            self.away_scores[player] = [score]
+
+    def __str__(self):
+        des = 'And the winner is ' + 
+
+euro_semi_final = Match(Spain, Portugal, datetime.date('2012', 'June', '27'))
+
+
+
+euro_semi_final.add_score(torres, 1)
+euro_semi_final.add_score(ronaldo,1)
+euro_semi_final.add_score(torres, 1)
+
+print winner()
 
 
 

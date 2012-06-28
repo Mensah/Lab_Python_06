@@ -17,3 +17,4 @@ class Team:
 
 Spain = Team('Espanyol', 'Euro2012','Nii Guardiola','6')
 print Spain
+
